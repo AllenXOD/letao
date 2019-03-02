@@ -1,0 +1,148 @@
+html {
+  font-size: 26.6667vw;
+}
+body {
+  font: 0.14rem/120% '微软雅黑';
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+img {
+  vertical-align: middle;
+}
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  background-color: #0064b2;
+  color: #fff;
+  width: 100vw;
+}
+#header .left {
+  width: .45rem;
+  height: .45rem;
+}
+#header .center {
+  flex: 1;
+  text-align: center;
+}
+#header .center h4 {
+  line-height: .45rem;
+  font-weight: normal;
+}
+#header .right {
+  width: .45rem;
+  height: .45rem;
+  line-height: .45rem;
+  text-align: center;
+}
+#header .right i {
+  font-size: .16rem;
+}
+#main {
+  position: relative;
+  padding: .45rem 0;
+  height: 100vh;
+}
+#main .swiper-container {
+  height: 100%;
+}
+#main .swiper-container .swiper-slide {
+  height: auto;
+}
+#footer {
+  width: 100vw;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: #0064b2;
+}
+#footer a {
+  display: flex;
+  height: .45rem;
+  color: #fff;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#footer a span {
+  font-size: .12rem;
+  line-height: 1;
+}
+#footer a.active {
+  color: #ff7104;
+}
+#main .slide a {
+  display: block;
+}
+#main .slide a img {
+  width: 100%;
+}
+#main .slide .swiper-pagination-bullet-active {
+  background-color: #fff;
+}
+#main .nav {
+  padding: .1rem;
+}
+#main .nav a {
+  display: block;
+}
+#main .nav a img {
+  width: 100%;
+}
+#main .banner {
+  padding: .1rem;
+}
+#main .banner .left a {
+  display: flex;
+}
+#main .banner .left a img {
+  width: 50%;
+  height: 1.2rem;
+}
+#main .banner .right a {
+  display: block;
+}
+#main .banner .right a img {
+  width: 100%;
+  height: 2.4rem;
+}
+#main .brand,
+#main .sport,
+#main .women,
+#main .man {
+  padding: .05rem;
+}
+#main .brand .title a,
+#main .sport .title a,
+#main .women .title a,
+#main .man .title a {
+  display: block;
+}
+#main .brand .title a img,
+#main .sport .title a img,
+#main .women .title a img,
+#main .man .title a img {
+  width: 100%;
+}
+#main .brand .content a,
+#main .sport .content a,
+#main .women .content a,
+#main .man .content a {
+  display: block;
+}
+#main .brand .content a img,
+#main .sport .content a img,
+#main .women .content a img,
+#main .man .content a img {
+  width: 100%;
+}
+#main .man .content a img {
+  height: 1.8345rem;
+}

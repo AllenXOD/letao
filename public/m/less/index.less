@@ -1,0 +1,78 @@
+@import './base.less';
+// 主体区域
+#main {
+    // 轮播图 
+    .slide {
+        a {
+            display: block;
+            img {
+                width: 100%;
+            }
+        }
+        .swiper-pagination-bullet-active {
+            background-color: #fff;
+        }
+    } // 导航栏
+    .nav {
+        padding: .1rem;
+        a {
+            display: block;
+            img {
+                width: 100%;
+            }
+        }
+    } // 广告栏
+    .banner {
+        padding: .1rem;
+        .left {
+            a {
+                // flex 布局， 自动转块，每个子元素不会有间隙
+                display: flex;
+                img {
+                    width: 50%;
+                    height: 1.2rem;
+                }
+            }
+        }
+        .right {
+            a {
+                display: block;
+                img {
+                    width: 100%;
+                    height: 2.4rem;
+                }
+            }
+        }
+    } // 品牌专区 运动专区 女士专区 男士专区
+    .brand,
+    .sport,
+    .women,
+    .man {
+        padding: .05rem;
+        .title {
+            a {
+                display: block;
+                img {
+                    width: 100%;
+                }
+            }
+        }
+        .content {
+            a {
+                display: block;
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .man {
+        .content {
+            a {
+                img {
+                    height: 1.8345rem;
+                }
+            }
+        }
+    }
+}

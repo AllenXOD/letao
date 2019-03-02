@@ -1,0 +1,170 @@
+html {
+  font-size: 26.6667vw;
+}
+body {
+  font: 0.14rem/120% '微软雅黑';
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+img {
+  vertical-align: middle;
+}
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  background-color: #0064b2;
+  color: #fff;
+  width: 100vw;
+}
+#header .left {
+  width: .45rem;
+  height: .45rem;
+}
+#header .center {
+  flex: 1;
+  text-align: center;
+}
+#header .center h4 {
+  line-height: .45rem;
+  font-weight: normal;
+}
+#header .right {
+  width: .45rem;
+  height: .45rem;
+  line-height: .45rem;
+  text-align: center;
+}
+#header .right i {
+  font-size: .16rem;
+}
+#main {
+  position: relative;
+  padding: .45rem 0;
+  height: 100vh;
+}
+#main .swiper-container {
+  height: 100%;
+}
+#main .swiper-container .swiper-slide {
+  height: auto;
+}
+#footer {
+  width: 100vw;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: #0064b2;
+}
+#footer a {
+  display: flex;
+  height: .45rem;
+  color: #fff;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#footer a span {
+  font-size: .12rem;
+  line-height: 1;
+}
+#footer a.active {
+  color: #ff7104;
+}
+#header {
+  z-index: 10;
+}
+#header .left {
+  text-align: center;
+}
+#header .left a {
+  display: block;
+  color: #fff;
+}
+#header .left a i {
+  font-size: .16rem;
+  line-height: .45rem;
+}
+#header .center form {
+  margin-top: .05rem;
+}
+#header .center form input {
+  width: 100%;
+  height: .34rem;
+  padding: .05rem .2rem;
+  margin: 0;
+  border-radius: .06rem;
+  font-size: .14rem;
+  box-sizing: border-box;
+  background-color: #fff;
+  text-align: left;
+  color: #666;
+}
+#main {
+  display: flex;
+  overflow: hidden;
+  background-color: #ccc;
+}
+#main .left {
+  width: .8rem;
+  height: 100vh;
+}
+#main .left .swiper-container {
+  height: 100%;
+}
+#main .left .swiper-container .swiper-slide {
+  height: auto;
+}
+#main .left ul {
+  padding: 0;
+  margin: 0;
+}
+#main .left ul li a {
+  display: block;
+  width: .8rem;
+  height: .45rem;
+  line-height: .45rem;
+  text-align: center;
+  background-color: #fff;
+  color: #666;
+}
+#main .left ul li.active a {
+  background-color: #ccc;
+  color: #f00;
+}
+#main .right {
+  flex: 1;
+  padding: .15rem;
+  height: 100vh;
+}
+#main .right .swiper-container {
+  height: 100%;
+}
+#main .right .swiper-container .swiper-slide {
+  height: auto;
+}
+#main .right .mui-col-xs-4 {
+  margin-bottom: .2rem;
+}
+#main .right a {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  background-color: #fff;
+}
+#main .right a img {
+  width: 100%;
+}
+#main .right a p {
+  font-size: .16rem;
+}

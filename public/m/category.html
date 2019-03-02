@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- 设置视口 -->
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- MUI框架 CSS -->
+    <link rel="stylesheet" href="lib/mui/css/mui.css">
+    <!-- 字体图标库 -->
+    <link rel="stylesheet" href="lib/fontAwesome/css/font-awesome.min.css">
+    <!-- swiper插件 CSS -->
+    <link rel="stylesheet" href="lib/swiper/css/swiper.min.css">
+    <!-- 项目CSS -->
+    <link rel="stylesheet" href="less/category.css">
+    <title>分类页面</title>
+
+</head>
+
+<body>
+
+    <!-- 头部区域 -->
+    <header id="header">
+        <div class="left">
+            <a href="index.html">
+                <i class="fa fa-chevron-left"></i>
+            </a>
+        </div>
+
+        <div class="center">
+            <form action="#">
+                <input type="search" placeholder="请输入你想要搜索的商品">
+            </form>
+        </div>
+
+        <div class="right">
+            <i class="fa fa-search"></i>
+        </div>
+    </header>
+
+    <!-- 主体区域 -->
+    <main id="main">
+        <div class="left">
+            <!-- Swiper -->
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <ul>
+                            <li class="active">
+                                <a href="#" data-index="1">运动馆</a>
+                            </li>
+                            <li>
+                                <a href="#" data-index="2">女士馆</a>
+                            </li>
+                            <li>
+                                <a href="#" data-index="3">男士馆</a>
+                            </li>
+                            <li>
+                                <a href="#" data-index="4">帆布馆</a>
+                            </li>
+                            <li>
+                                <a href="#" data-index="5">户外馆</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <!-- Swiper -->
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <!-- 显示的内容 -->
+                        <div class="mui-row">
+                            <div class="mui-col-xs-4">
+                                <a href="#">
+                                    <img src="../mobile/images/brand1.png">
+                                    <p>耐克</p>
+                                </a>
+                            </div>
+                            <div class="mui-col-xs-4">
+                                <a href="#">
+                                    <img src="../mobile/images/brand2.png">
+                                    <p>阿迪</p>
+                                </a>
+                            </div>
+                            <div class="mui-col-xs-4">
+                                <a href="#">
+                                    <img src="../mobile/images/brand3.png">
+                                    <p>新百伦</p>
+                                </a>
+                            </div>
+                            <div class="mui-col-xs-4">
+                                <a href="#">
+                                    <img src="../mobile/images/brand4.png">
+                                    <p>哥伦比亚</p>
+                                </a>
+                            </div>
+                            <div class="mui-col-xs-4">
+                                <a href="#">
+                                    <img src="../mobile/images/brand5.png">
+                                    <p>匡威</p>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- 尾部区域 -->
+    <footer id="footer">
+        <div class="mui-row">
+            <div class="mui-col-xs-3">
+                <a href="index.html">
+                    <i class="fa fa-home"></i>
+                    <span>首页</span>
+                </a>
+            </div>
+            <div class="mui-col-xs-3">
+                <a href="category.html" class="active">
+                    <i class="fa fa-bars"></i>
+                    <span>分类</span>
+                </a>
+            </div>
+            <div class="mui-col-xs-3">
+                <a href="index.html">
+                    <i class="fa fa-shopping-cart"></i>
+                    <span>购物车</span>
+                </a>
+            </div>
+            <div class="mui-col-xs-3">
+                <a href="index.html">
+                    <i class="fa fa-user"></i>
+                    <span>个人中心</span>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MUI框架 JS -->
+    <script src="lib/mui/js/mui.js"></script>
+    <!-- zepto框架 JS -->
+    <script src="lib/zepto/zepto.min.js"></script>
+    <!-- 模板引擎 -->
+    <script src="lib/artTemplate/template-web.js"></script>
+    <!-- swiper插件 JS -->
+    <script src="lib/swiper/js/swiper.min.js"></script>
+    <!-- 项目JS -->
+    <script src="js/category.js"></script>
+</body>
+
+</html>

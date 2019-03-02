@@ -15,6 +15,9 @@ h6 {
 img {
   vertical-align: middle;
 }
+.hide {
+  display: none;
+}
 #header {
   position: fixed;
   top: 0;
@@ -145,4 +148,40 @@ img {
 }
 #main .man .content a img {
   height: 1.8345rem;
+}
+#loading .box {
+  width: 1.4rem;
+  height: 1.4rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -0.7rem;
+  margin-top: -0.7rem;
+}
+#loading .bg {
+  width: 1.4rem;
+  height: 1.4rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: .7rem;
+  box-shadow: 0 0 .1rem .04rem #c041ff4d inset;
+}
+#loading .load {
+  width: 1.4rem;
+  height: 1.4rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: .7rem;
+  box-shadow: 0 0.04rem 0 #0064b2 inset;
+  animation: rotate 1s linear infinite;
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }

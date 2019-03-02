@@ -76,3 +76,43 @@
         }
     }
 }
+
+#loading {
+    .box {
+        width: 1.4rem;
+        height: 1.4rem;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-left: -0.7rem;
+        margin-top: -0.7rem;
+    }
+    .bg {
+        width: 1.4rem;
+        height: 1.4rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-radius: .7rem;
+        box-shadow: 0 0 .1rem .04rem #c041ff4d inset;
+    }
+    .load {
+        width: 1.4rem;
+        height: 1.4rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-radius: .7rem;
+        box-shadow: 0 .04rem 0 @main-color inset;
+        animation: rotate 1s linear infinite;
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}

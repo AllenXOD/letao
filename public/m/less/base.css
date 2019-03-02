@@ -15,6 +15,9 @@ h6 {
 img {
   vertical-align: middle;
 }
+.hide {
+  display: none;
+}
 #header {
   position: fixed;
   top: 0;

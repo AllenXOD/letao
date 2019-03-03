@@ -1,36 +1,5 @@
 @import 'base.less';
-#header {
-    z-index: 10;
-    .left {
-        text-align: center;
-        a {
-            display: block;
-            color: #fff;
-            i {
-                font-size: .16rem;
-                line-height: .45rem;
-            }
-        }
-    }
-    .center {
-        form {
-            margin-top: .05rem;
-            input {
-                width: 100%;
-                height: .34rem;
-                padding: .05rem .2rem;
-                margin: 0;
-                border-radius: .06rem;
-                font-size: .14rem;
-                box-sizing: border-box;
-                background-color: #fff;
-                text-align: left;
-                color: #666;
-            }
-        }
-    }
-}
-
+// 分类页面主体样式
 #main {
     display: flex;
     overflow: hidden;
@@ -45,17 +14,12 @@
             }
         }
         ul {
-            padding: 0;
-            margin: 0;
+            .mui-table-view-cell::after {
+                left: 0;
+            }
             li {
                 a {
-                    display: block;
-                    width: .8rem;
                     height: .45rem;
-                    line-height: .45rem;
-                    text-align: center;
-                    background-color: #fff;
-                    color: #666;
                 }
                 &.active {
                     a {
@@ -77,21 +41,20 @@
             }
         }
         .mui-col-xs-4 {
-            margin-bottom: .2rem;
+            margin-bottom: .1rem;
         }
         a {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            color: #666;
             background-color: #fff;
+            display: block;
+            text-align: center;
+            border: 1px solid transparent;
             img {
                 width: 100%;
+                height: .6rem;
             }
             p {
                 font-size: .16rem;
+                margin: .04rem 0;
             }
         }
     }

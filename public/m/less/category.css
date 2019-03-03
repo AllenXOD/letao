@@ -15,6 +15,9 @@ h6 {
 img {
   vertical-align: middle;
 }
+.hide {
+  display: none;
+}
 #header {
   position: fixed;
   top: 0;
@@ -23,10 +26,18 @@ img {
   background-color: #0064b2;
   color: #fff;
   width: 100vw;
+  z-index: 10;
 }
 #header .left {
+  text-align: center;
   width: .45rem;
   height: .45rem;
+}
+#header .left a {
+  display: block;
+  color: #fff;
+  font-size: .16rem;
+  line-height: .45rem;
 }
 #header .center {
   flex: 1;
@@ -35,6 +46,21 @@ img {
 #header .center h4 {
   line-height: .45rem;
   font-weight: normal;
+}
+#header .center form {
+  padding-top: .05rem;
+}
+#header .center form input {
+  width: 100%;
+  height: .34rem;
+  padding: .05rem .2rem;
+  margin-bottom: 0;
+  border-radius: .06rem;
+  font-size: .14rem;
+  box-sizing: border-box;
+  background-color: #fff;
+  text-align: left;
+  color: #666;
 }
 #header .right {
   width: .45rem;
@@ -62,6 +88,7 @@ img {
   bottom: 0;
   left: 0;
   background-color: #0064b2;
+  z-index: 10;
 }
 #footer a {
   display: flex;
@@ -78,35 +105,6 @@ img {
 #footer a.active {
   color: #ff7104;
 }
-#header {
-  z-index: 10;
-}
-#header .left {
-  text-align: center;
-}
-#header .left a {
-  display: block;
-  color: #fff;
-}
-#header .left a i {
-  font-size: .16rem;
-  line-height: .45rem;
-}
-#header .center form {
-  margin-top: .05rem;
-}
-#header .center form input {
-  width: 100%;
-  height: .34rem;
-  padding: .05rem .2rem;
-  margin: 0;
-  border-radius: .06rem;
-  font-size: .14rem;
-  box-sizing: border-box;
-  background-color: #fff;
-  text-align: left;
-  color: #666;
-}
 #main {
   display: flex;
   overflow: hidden;
@@ -122,18 +120,11 @@ img {
 #main .left .swiper-container .swiper-slide {
   height: auto;
 }
-#main .left ul {
-  padding: 0;
-  margin: 0;
+#main .left ul .mui-table-view-cell::after {
+  left: 0;
 }
 #main .left ul li a {
-  display: block;
-  width: .8rem;
   height: .45rem;
-  line-height: .45rem;
-  text-align: center;
-  background-color: #fff;
-  color: #666;
 }
 #main .left ul li.active a {
   background-color: #ccc;
@@ -151,20 +142,19 @@ img {
   height: auto;
 }
 #main .right .mui-col-xs-4 {
-  margin-bottom: .2rem;
+  margin-bottom: .1rem;
 }
 #main .right a {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: #666;
   background-color: #fff;
+  display: block;
+  text-align: center;
+  border: 1px solid transparent;
 }
 #main .right a img {
   width: 100%;
+  height: .6rem;
 }
 #main .right a p {
   font-size: .16rem;
+  margin: .04rem 0;
 }

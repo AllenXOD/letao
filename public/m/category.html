@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="lib/swiper/css/swiper.min.css">
     <!-- 项目CSS -->
     <link rel="stylesheet" href="less/category.css">
+    <!-- 页面标题logo -->
+    <link rel="SHORTCUT ICON" href="favicon.ico">
     <title>分类页面</title>
 
 </head>
@@ -24,9 +26,7 @@
     <!-- 头部区域 -->
     <header id="header">
         <div class="left">
-            <a href="index.html">
-                <i class="fa fa-chevron-left"></i>
-            </a>
+            <a href="index.html" class="fa fa-chevron-left"></a>
         </div>
 
         <div class="center">
@@ -47,22 +47,22 @@
             <div class="swiper-container">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <ul>
-                            <li class="active">
+                        <ul class="mui-table-view">
+                            <!-- <li class="mui-table-view-cell active">
                                 <a href="#" data-index="1">运动馆</a>
                             </li>
-                            <li>
+                            <li class="mui-table-view-cell">
                                 <a href="#" data-index="2">女士馆</a>
                             </li>
-                            <li>
+                            <li class="mui-table-view-cell">
                                 <a href="#" data-index="3">男士馆</a>
                             </li>
-                            <li>
+                            <li class="mui-table-view-cell">
                                 <a href="#" data-index="4">帆布馆</a>
                             </li>
-                            <li>
+                            <li class="mui-table-view-cell">
                                 <a href="#" data-index="5">户外馆</a>
-                            </li>
+                            </li> -->
                         </ul>
                     </div>
                 </div>
@@ -75,7 +75,7 @@
                     <div class="swiper-slide">
                         <!-- 显示的内容 -->
                         <div class="mui-row">
-                            <div class="mui-col-xs-4">
+                            <!-- <div class="mui-col-xs-4">
                                 <a href="#">
                                     <img src="../mobile/images/brand1.png">
                                     <p>耐克</p>
@@ -104,7 +104,7 @@
                                     <img src="../mobile/images/brand5.png">
                                     <p>匡威</p>
                                 </a>
-                            </div>
+                            </div> -->
                         </div>
 
                     </div>
@@ -153,6 +153,30 @@
     <script src="lib/swiper/js/swiper.min.js"></script>
     <!-- 项目JS -->
     <script src="js/category.js"></script>
+
+    <!-- 左侧导航栏模板 -->
+    <script type="text/html" id="leftnav">
+        {{ each rows value i }}
+            <li class="mui-table-view-cell {{ i == 0?'active':'' }}"  data-index="{{ value.id }}">
+                <a href="#">{{ value.categoryName }}</a>
+            </li>
+        {{ /each }}
+    </script>
+    <!-- 右侧内容模板 -->
+    <script type="text/html" id="rightnav">
+        {{ if rows.length > 0 }}
+            {{ each rows value i }}
+            <div class="mui-col-xs-4">
+                <a href="#">
+                    <img src="{{ value.brandLogo }}">
+                    <p>{{ value.brandName }}</p>
+                </a>
+            </div>
+            {{ /each }}
+        {{ else }}
+            <p>暂无商品信息</p>
+        {{ /if }}
+    </script>
 </body>
 
 </html>

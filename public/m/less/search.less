@@ -1,0 +1,76 @@
+@import './base.less';
+#main {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    .search-form {
+        padding: .1rem;
+        form {
+            display: flex;
+            input {
+                flex: 1;
+                height: .36rem;
+                border: 1px solid @main-color;
+                background-color: #fff;
+                font-size: .14rem;
+                text-align: left;
+                border-radius: .06rem 0 0 .06rem;
+                margin-bottom: 0;
+            }
+            button {
+                width: .6rem;
+                height: .36rem;
+                background: @main-color;
+                border-radius: 0 .06rem .06rem 0;
+                border-color: @main-color;
+            }
+        }
+    }
+    .search-history {
+        flex: 1;
+        padding: .1rem;
+         // .title {
+        //     display: flex;
+        //     justify-content: space-between;
+        //     align-items: center;
+        //     box-shadow: 0rem 0rem .02rem #666;
+        //     padding: .1rem;
+        //     border-radius: .06rem .06rem 0 0;
+        //     a {
+        //         color: #666;
+        //     }
+        // }
+        // .content {
+        //     border-radius: 0 0 .06rem .06rem;
+        //     box-shadow: 0rem 0rem .02rem #666;
+        //     .mui-table-view-cell::after {
+        //         left: 0;
+        //     }
+        // }
+        .mui-card {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            .mui-card-header {
+                span {
+                    font-size: .16rem
+                }
+                a {
+                    color: #666;
+                }
+            }
+            .mui-card-content {
+                flex: 1;
+                .swiper-container {
+                    height: 100%;
+                    .swiper-slide {
+                        height: auto;
+                    }
+                }
+                .mui-table-view-cell::after {
+                    left: 0;
+                }
+            }
+        }
+    }
+}

@@ -52,6 +52,10 @@ $(function () {
             var searchHistory = JSON.stringify(searchHistory);
             localStorage.setItem('searchHistory', searchHistory);
 
+            // encodeURI 加密数据<默认方式,可以不加> 解决url乱码
+            // escape 加密  unescape解密
+            window.location.href = 'productlist.html?search='+encodeURI(searchStr)+'&time='+new Date().getTime();
+
             // 搜索时添加记录
             queryHistory();
             $('.input-search').val('');
@@ -85,8 +89,9 @@ $(function () {
     // 清空记录
     function clearHistory() {
         $('.btn-clear').on('tap', function () {
-            var searchHistory = [];
-            localStorage.setItem('searchHistory', searchHistory);
+            // var searchHistory = [];
+            // localStorage.setItem('searchHistory', searchHistory);
+            localStorage.removeItem('searchHistory');
             queryHistory();
         });
     }
@@ -102,5 +107,6 @@ $(function () {
             mousewheel: true,
         });
     }
+
 })
 

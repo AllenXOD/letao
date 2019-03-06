@@ -108,7 +108,7 @@
                 </a>
             </div>
             <div class="mui-col-xs-3">
-                <a href="index.html">
+                <a href="cart.html">
                     <i class="fa fa-shopping-cart"></i>
                     <span>购物车</span>
                 </a>
@@ -143,7 +143,8 @@
                     <span>{{ value.price }}</span>
                     <del>{{ value.oldPrice }}</del>
                 </p>
-                <button type="button" class="mui-btn mui-btn-primary product-buy">立即购买</button>
+                <!-- mui插件的下拉上拉组件中阻止了a标签的跳转 -->
+                <button type="button" data-id="{{ value.id }}" class="mui-btn mui-btn-primary product-buy">立即购买</button>
             </div>
         </div>
         {{ /each }}

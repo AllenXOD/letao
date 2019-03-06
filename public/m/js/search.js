@@ -11,6 +11,7 @@ $(function () {
     deleteHistory();
     clearHistory();
     scoll();
+    toProductList();
 
     // 添加记录
     function addHistory() {
@@ -54,7 +55,7 @@ $(function () {
 
             // encodeURI 加密数据<默认方式,可以不加> 解决url乱码
             // escape 加密  unescape解密
-            window.location.href = 'productlist.html?search='+encodeURI(searchStr)+'&time='+new Date().getTime();
+            window.location.href = 'productlist.html?search=' + encodeURI(searchStr) + '&time=' + new Date().getTime();
 
             // 搜索时添加记录
             queryHistory();
@@ -74,8 +75,11 @@ $(function () {
         });
         $('.search-history ul').html(html);
     }
+    // 开关思想, 实现点击删除时不进行页面跳转
+    var clickDelete = false;
     // 删除记录
     function deleteHistory() {
+        // e = e || window.event;
         $('.close-box').on('tap', 'li span', function () {
             var searchHistory = localStorage.getItem('searchHistory');
             searchHistory = JSON.parse(searchHistory);
@@ -84,6 +88,9 @@ $(function () {
             searchHistory = JSON.stringify(searchHistory);
             localStorage.setItem('searchHistory', searchHistory);
             queryHistory();
+            // e.preventDefault();
+            // e.stopPropagation();
+            clickDelete = true;
         });
     }
     // 清空记录
@@ -108,5 +115,16 @@ $(function () {
         });
     }
 
+    // 点击历史记录跳转
+    function toProductList() {
+        $('.close-box').on('tap', 'li', function () {
+            if (clickDelete) {
+                clickDelete = false;
+                return false;
+            }
+            var search = $(this).data('search');
+            location = 'productlist.html?search=' + search + '&time=' + new Date().getTime();
+        })
+    }
 })
 

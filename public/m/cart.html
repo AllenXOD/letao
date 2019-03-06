@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- 设置视口 -->
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- MUI框架 CSS -->
+    <link rel="stylesheet" href="lib/mui/css/mui.css">
+    <!-- 字体图标库 -->
+    <link rel="stylesheet" href="lib/fontAwesome/css/font-awesome.min.css">
+    <!-- swiper插件 CSS -->
+    <link rel="stylesheet" href="lib/swiper/css/swiper.min.css">
+    <!-- 项目CSS -->
+    <link rel="stylesheet" href="less/cart.css">
+    <!-- 页面标题logo -->
+    <link rel="SHORTCUT ICON" href="favicon.ico">
+    <title>乐淘购物车</title>
+</head>
+
+<body>
+
+    <!-- 头部区域 -->
+    <header id="header">
+        <div class="left">
+            <a href="search.html" class="fa fa-chevron-left"></a>
+        </div>
+
+        <div class="center">
+            <h4>乐淘购物车</h4>
+        </div>
+
+        <div class="right">
+            <a class="fa fa-search" href="./search.html"></a>
+        </div>
+    </header>
+
+    <!-- 主体区域 -->
+    <main id="main">
+        <!-- 下拉刷新容器 区域滚动父容器 -->
+        <div id="pullrefresh" class="mui-content mui-scroll-wrapper">
+            <!-- 区域滚动子容器 -->
+            <div class="mui-scroll">
+                <ul class="mui-table-view cart-list">
+                    <li class="mui-table-view-cell">
+                        <div class="mui-slider-right mui-disabled">
+                            <a class="mui-btn mui-btn-blue">编辑</a>
+                            <a class="mui-btn mui-btn-red">删除</a>
+                        </div>
+                        <a class="mui-navigate-right mui-slider-handle">
+                            <div class="left">
+                                <img src="./images/banner1.png">
+                                <div class="mui-input-row mui-checkbox">
+                                    <input name="checkbox" type="checkbox">
+                                </div>
+                            </div>
+                            <div class="right">
+                                <p class="product-name">
+                                    名称: <strong>
+                                        李宁2333333333333333阿瑟非人类和司法局卡巴斯基付款了吧设计费不拉屎的空间吧
+                                    </strong>
+                                </p>
+                                <p class="product-price">
+                                    价格: <span>$123</span>&nbsp;<del>$230</del>
+                                </p>
+                                <div class="product-params">
+                                    <div class="size">
+                                        鞋码: <span>50</span>
+                                    </div>
+                                    <div class="num">
+                                        数量x<span>1</span>双
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- 订单区域 -->
+    <div id="order">
+        <div class="order-count">
+            订单总额: $<span>252121.0</span>
+        </div>
+        <button type="button" class="mui-btn mui-btn-danger">提交订单</button>
+    </div>
+
+    <!-- 尾部区域 -->
+    <footer id="footer">
+        <div class="mui-row">
+            <div class="mui-col-xs-3">
+                <a href="index.html">
+                    <i class="fa fa-home"></i>
+                    <span>首页</span>
+                </a>
+            </div>
+            <div class="mui-col-xs-3">
+                <a href="category.html">
+                    <i class="fa fa-bars"></i>
+                    <span>分类</span>
+                </a>
+            </div>
+            <div class="mui-col-xs-3">
+                <a href="index.html" class="active">
+                    <i class="fa fa-shopping-cart"></i>
+                    <span>购物车</span>
+                </a>
+            </div>
+            <div class="mui-col-xs-3">
+                <a href="index.html">
+                    <i class="fa fa-user"></i>
+                    <span>个人中心</span>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MUI框架 JS -->
+    <script src="lib/mui/js/mui.js"></script>
+    <!-- zepto框架 JS -->
+    <script src="lib/zepto/zepto.min.js"></script>
+    <!-- 模板引擎 -->
+    <script src="lib/artTemplate/template-web.js"></script>
+    <!-- swiper插件 JS -->
+    <script src="lib/swiper/js/swiper.min.js"></script>
+    <!-- 项目JS -->
+    <script src="js/cart.js"></script>
+</body>
+
+</html>

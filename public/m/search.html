@@ -113,7 +113,7 @@
                 </a>
             </div>
             <div class="mui-col-xs-3">
-                <a href="index.html">
+                <a href="cart.html">
                     <i class="fa fa-shopping-cart"></i>
                     <span>购物车</span>
                 </a>
@@ -142,7 +142,7 @@
     <script type="text/html" id="search-history">
         {{ if list.length > 0 }}
             {{ each list value i }}
-                <li class="mui-table-view-cell" data-index="{{ i }}"> 
+                <li class="mui-table-view-cell" data-search="{{ value.key }}" data-index="{{ i }}"> 
                     {{ value.key }}
                     <span class="mui-badge fa fa-close"></span>
                 </li>

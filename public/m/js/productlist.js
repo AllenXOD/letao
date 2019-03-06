@@ -13,6 +13,7 @@ $(function () {
     queryProduct();
     sortProduct();
     pullRefresh();
+    toDetail();
 
     var search = '';
     // 查询商品列表的函数
@@ -194,7 +195,7 @@ $(function () {
                         proName: search,
                         // 定义一个变量page存储了当前页码数 请求下一页让page进行++ 要自增
                         page: ++page,
-                        pageSize: 4
+                        pageSize: 4,
                     },
                     success: function (res) {
                         // console.log(res);
@@ -215,5 +216,13 @@ $(function () {
                 })
             }, 1000)
         }
+    }
+
+    // 商品详情页跳转
+    function toDetail() {
+        $('.product-list').on('tap', '.product-buy', function () {
+            var id = $(this).data('id');
+            location = 'detail.html?id=' + id;
+        })
     }
 })

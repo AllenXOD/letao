@@ -43,15 +43,4 @@ $(function () {
         })
     }
 
-    function zeQueryString(key) {
-        // 正则匹配 key = value
-        var reg = new RegExp("[^\?&]?" + encodeURI(key) + "=[^&]+");
-        // 将正则匹配的值存入数组
-        var arr = location.search.match(reg);
-        if (arr != null) {
-            // 截取 = 号 取出后面的值
-            return decodeURI(arr[0].substring(arr[0].search("=") + 1));
-        }
-        return "";
-    }
 })

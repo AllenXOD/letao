@@ -66,9 +66,17 @@ $(function () {
             url: 'http://localhost:3000/category/querySecondCategory',
             data: { id: id },
             dataType: 'json',
+            beforeSend: function() {
+                $('.mask').show();
+            },
             success: function (obj) {
                 var html = template('rightnav', obj);
                 $('.right .mui-row').html(html);
+            },
+            complete: function() {
+                setTimeout(() => {
+                    $('.mask').hide();
+                }, 5000);
             }
         })
     }

@@ -86,10 +86,9 @@ img {
 
 // 中间区域
 #main {
-    // position: relative;
+    position: relative;
     padding: .45rem 0;
-    height: 100vh;
-     // MUI 组件
+    height: 100vh; // MUI 组件
     // .mui-scroll-wrapper {
     //     position: relative;
     //     height: 100%;
@@ -99,8 +98,7 @@ img {
         // 把默认绝对定位改成相对定位
         position: relative; // 把这个区域滚动的盒子高度设置为100% 和main的内容一样
         height: 100%;
-    } 
-    // swiper的内容滚动样式修改 给父容器高度固定100% 子容器高度auto
+    } // swiper的内容滚动样式修改 给父容器高度固定100% 子容器高度auto
     .swiper-container {
         height: 100%; // 子容器的高度 为auto
         .swiper-slide {
@@ -128,6 +126,21 @@ img {
                 border-radius: 0 .06rem .06rem 0;
                 border-color: @main-color;
             }
+        }
+    } // 遮罩层
+    .mask {
+        z-index: 5;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: #232323;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+            width: 100%;
         }
     }
 }

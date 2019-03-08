@@ -14,10 +14,11 @@
     <!-- swiper插件 CSS -->
     <link rel="stylesheet" href="lib/swiper/css/swiper.min.css">
     <!-- 项目CSS -->
-    <link rel="stylesheet" href="less/login.css">
+    <link rel="stylesheet" href="less/user.css">
     <!-- 页面标题logo -->
     <link rel="SHORTCUT ICON" href="favicon.ico">
-    <title>登录页面</title>
+    <title>个人中心</title>
+
 </head>
 
 <body>
@@ -29,39 +30,45 @@
         </div>
 
         <div class="center">
-            <h4>乐淘登录中心</h4>
+            <h4>个人中心</h4>
         </div>
 
         <div class="right">
-            <a class="fa fa-home" href="./index.html"></a>
+            <!-- <a class="fa fa-search" href="./search.html"></a> -->
         </div>
     </header>
 
     <!-- 主体区域 -->
     <main id="main">
-
-        <form class="mui-input-group">
-            <div class="mui-input-row">
-                <label>用户名</label>
-                <input type="text" class="username" placeholder="请输入用户名">
-            </div>
-            <div class="mui-input-row">
-                <label>密码</label>
-                <input type="password" class="mui-input-password password" placeholder="请输入密码">
-            </div>
-            <div class="mui-button-row">
-                <button type="button" class="mui-btn mui-btn-primary btn-login" onclick="return false;">登录</button>&nbsp;&nbsp;
-                <a type="button" class="mui-btn mui-btn-danger" href="register.html">注册</a>
-            </div>
-        </form>
-
+        <ul class="mui-table-view">
+            <li class="mui-table-view-cell mui-media">
+                <a href="javascript:void(0);">
+                    <img src="images/user.jpg" class="mui-media-object mui-pull-left">
+                    <div class="mui-media-body">
+                        <p>用户名: <span class="userName">itcast</span></p>
+                        <p class="mui-ellipsis">手机号: <span class="mobile">0</span></p>
+                    </div>
+                </a>
+            </li>
+            <li class="mui-table-view-cell">
+                <a class="mui-navigate-right">我的购物车</a>
+            </li>
+            <li class="mui-table-view-cell">
+                <a class="mui-navigate-right">收货地址管理</a>
+            </li>
+            <li class="mui-table-view-cell">
+                <div>
+                    <a class="mui-btn btn-exit">退出登录</a>
+                </div>
+            </li>
+        </ul>
     </main>
 
     <!-- 尾部区域 -->
     <footer id="footer">
         <div class="mui-row">
             <div class="mui-col-xs-3">
-                <a href="index.html" class="active">
+                <a href="index.html">
                     <i class="fa fa-home"></i>
                     <span>首页</span>
                 </a>
@@ -79,7 +86,7 @@
                 </a>
             </div>
             <div class="mui-col-xs-3">
-                <a href="user.html">
+                <a href="user.html" class="active">
                     <i class="fa fa-user"></i>
                     <span>个人中心</span>
                 </a>
@@ -95,11 +102,12 @@
     <script src="lib/artTemplate/template-web.js"></script>
     <!-- swiper插件 JS -->
     <script src="lib/swiper/js/swiper.min.js"></script>
+    <!-- 项目JS -->
+    <script src="js/user.js"></script>
     <!-- 公共js -->
     <script src="js/comment.js"></script>
-    <!-- 项目JS -->
-    <script src="js/login.js"></script>
-    
+
+
 </body>
 
 </html>

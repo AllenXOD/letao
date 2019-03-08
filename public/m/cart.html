@@ -44,7 +44,7 @@
             <!-- 区域滚动子容器 -->
             <div class="mui-scroll">
                 <ul class="mui-table-view cart-list">
-                    <li class="mui-table-view-cell">
+                    <!-- <li class="mui-table-view-cell">
                         <div class="mui-slider-right mui-disabled">
                             <a class="mui-btn mui-btn-blue">编辑</a>
                             <a class="mui-btn mui-btn-red">删除</a>
@@ -75,17 +75,16 @@
                                 </div>
                             </div>
                         </a>
-                    </li>
+                    </li> -->
                 </ul>
             </div>
         </div>
-
     </main>
 
     <!-- 订单区域 -->
     <div id="order">
         <div class="order-count">
-            订单总额: $<span>252121.0</span>
+            订单总额: $ <span> 0 </span>
         </div>
         <button type="button" class="mui-btn mui-btn-danger">提交订单</button>
     </div>
@@ -106,13 +105,13 @@
                 </a>
             </div>
             <div class="mui-col-xs-3">
-                <a href="index.html" class="active">
+                <a href="cart.html" class="active">
                     <i class="fa fa-shopping-cart"></i>
                     <span>购物车</span>
                 </a>
             </div>
             <div class="mui-col-xs-3">
-                <a href="index.html">
+                <a href="user.html">
                     <i class="fa fa-user"></i>
                     <span>个人中心</span>
                 </a>
@@ -130,6 +129,72 @@
     <script src="lib/swiper/js/swiper.min.js"></script>
     <!-- 项目JS -->
     <script src="js/cart.js"></script>
+    <!-- 公共js -->
+    <script src="js/comment.js"></script>
+
+    <!-- 模板 -->
+    <script type="text/html" id="carttpl">
+        {{ if list.length > 0}}
+        {{ each list value i }}
+        <li class="mui-table-view-cell">
+            <div class="mui-slider-right mui-disabled">
+                <a class="mui-btn mui-btn-blue btn-edit" data-product="{{ value }}">编辑</a>
+                <a class="mui-btn mui-btn-red btn-delete" data-id="{{ value.id }}">删除</a>
+            </div>
+            <a class="mui-navigate-right mui-slider-handle">
+                <div class="left">
+                    <img src="{{ value.pic[0].picAddr }}">
+                    <div class="mui-input-row mui-checkbox">
+                        <input name="checkbox" checked type="checkbox" data-price="{{ value.price }}" data-num="{{ value.num }}">
+                    </div>
+                </div>
+                <div class="right">
+                    <p class="product-name">
+                        名称: <strong>
+                            {{ value.proName }}
+                        </strong>
+                    </p>
+                    <p class="product-price">
+                        价格: <span>${{ value.price }}</span>&nbsp;<del>${{ value.oldprice }}</del>
+                    </p>
+                    <div class="product-params">
+                        <div class="size">
+                            鞋码: <span>{{ value.size }}</span>
+                        </div>
+                        <div class="num">
+                            数量x<span>{{ value.num }}</span>双
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </li>
+        {{ /each }}
+        {{ else }}
+            <li class="mui-table-view-cell">
+                您的购物车空空如也!~
+            </li>
+        {{/if}}
+    </script>
+    <script type="text/html" id="edittpl">
+        <ul class="mui-table-view-cell view-cell">
+            <li class="mui-table-view-cell product-size view-cell">
+                尺码: <span>
+                    {{ each productSize value i}}
+                    <button type="button" data-size="{{ value }}" class="mui-btn {{ value ==  size ? 'mui-btn-warning' : '' }}">{{ value }}</button>
+                    {{ /each }}
+                </span>
+            </li>
+
+            <li class="mui-table-view-cell product-num view-cell">
+                数量: <div class="mui-numbox" data-numbox-step='1' data-numbox-min='1' data-numbox-max='{{ productNum }}'>
+                    <button class="mui-btn mui-numbox-btn-minus" type="button">-</button>
+                    <input class="mui-numbox-input" type="number" value="{{ num }}" />
+                    <button class="mui-btn mui-numbox-btn-plus" type="button">+</button>
+                </div>
+                剩余: <span>{{ productNum }}</span>
+            </li>
+        </ul>
+    </script>
 </body>
 
 </html>

@@ -156,7 +156,7 @@ img {
   left: 50%;
   transform: translateX(-50%);
   top: auto;
-  bottom: .1rem;
+  bottom: 0;
 }
 #main .cart-list li a .left .mui-checkbox input::before {
   color: #0064b2;
@@ -192,4 +192,10 @@ img {
   padding: .05rem;
   line-height: .4rem;
   background-color: #fff;
+}
+.view-cell {
+  padding: 0.11rem 0;
+}
+.view-cell .product-size button {
+  margin-bottom: .05rem;
 }

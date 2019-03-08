@@ -18,7 +18,7 @@
                             left: 50%;
                             transform: translateX(-50%);
                             top: auto;
-                            bottom: .1rem;
+                            bottom: 0;
                             &::before {
                                 color: @main-color;
                             }
@@ -28,10 +28,10 @@
                 .right {
                     flex: 1;
                     line-height: .22rem;
-                    .product-name{
+                    .product-name {
                         color: #666;
                     }
-                    .product-price{
+                    .product-price {
                         color: #666;
                         span {
                             color: #f00;
@@ -50,6 +50,7 @@
         }
     }
 }
+
 // 订单区域
 #order {
     position: fixed;
@@ -61,4 +62,14 @@
     padding: .05rem;
     line-height: .4rem;
     background-color: #fff;
+}
+
+// 去掉边距
+.view-cell {
+    padding: 0.11rem 0;
+    .product-size {
+        button {
+            margin-bottom: .05rem;
+        }
+    }
 }

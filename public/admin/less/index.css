@@ -1,0 +1,95 @@
+#main {
+  display: flex;
+}
+#main .left {
+  background-color: #88cdea;
+  width: 200px;
+}
+#main .left .user-info {
+  padding: 30px;
+}
+#main .left .user-info img {
+  width: 140px;
+  height: 140px;
+  border: 10px solid #fff;
+  box-shadow: 0 0 2px #ff65b0;
+  border-radius: 50%;
+}
+#main .left .user-info p {
+  text-align: center;
+  margin-top: 10px;
+}
+#main .left .list-group .list-group-item {
+  background-color: #88cdea;
+  border: 0;
+}
+#main .left .list-group .list-group-item.active {
+  background-color: #ff65b0;
+  border-color: #ff65b0;
+  color: #fff;
+}
+#main .left .list-group .list-group-item:hover {
+  background-color: #ff65b0;
+  border-color: #ff65b0;
+  color: #fff;
+}
+#main .left .list-group .category-manage {
+  padding-left: 20px;
+}
+#main .right {
+  flex: 1;
+}
+#main .right .title {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+#main .right .title .btn-menu {
+  font-size: 20px;
+  background-color: #98cb3f;
+  display: block;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+#main .right .title .btn-exit {
+  font-size: 18px;
+  background-color: #98cb3f;
+  display: block;
+  width: 60px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+#main .right .content {
+  padding: 20px;
+  background-color: #eee;
+}
+#main .right .content .table {
+  background-color: #fff;
+  height: 400px;
+}
+#main .right .content .table th,
+#main .right .content .table td {
+  text-align: center;
+  line-height: 30px;
+}
+#main .right .content .table th img,
+#main .right .content .table td img {
+  width: 165px;
+  height: 85px;
+}
+#main .right .content .modal .input-group {
+  padding: 5px 0;
+}
+#main .right .content .modal .input-group .brand-logo {
+  width: 160px;
+  height: 160px;
+}

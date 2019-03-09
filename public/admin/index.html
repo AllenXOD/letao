@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>后台登录</title>
+    <!-- 页面标题logo -->
+    <link rel="SHORTCUT ICON" href="favicon.ico">
+    <!-- bootstrap CSS -->
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
+    <!-- 图标库 CSS -->
+    <link rel="stylesheet" href="lib/font-awesome/css/font-awesome.css">
+    <!-- 文档CSS -->
+    <link rel="stylesheet" href="less/index.css">
+</head>
+
+<body>
+    <main id="main">
+        <div class="left">
+            <div class="user-info">
+                <img src="images/18.jpg">
+                <p>简桥</p>
+            </div>
+            <div class="list-group">
+                <a href="#" class="list-group-item active">
+                    用户管理
+                </a>
+                <a href="#collapseExample" data-toggle="collapse" class="list-group-item">分类管理</a>
+                <div class="collapse category-manage" id="collapseExample">
+                    <a href="firstCategory.html" class="list-group-item">一级</a>
+                    <a href="secondCategory.html" class="list-group-item">二级</a>
+                </div>
+                <a href="#" class="list-group-item">商品管理</a>
+            </div>
+        </div>
+        <div class="right">
+            <div class="title">
+                <a href="#" class="fa fa-navicon btn-menu"></a>
+                <a href="#" class="fa fa-sign-out btn-exit">退出</a>
+            </div>
+            <div class="content">
+                <table class="table table-striped table-hover user-info">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>用户名</th>
+                            <th>电话</th>
+                            <th>状态</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- <tr>
+                            <th scope="row">1</th>
+                            <td>mark</td>
+                            <td>131350156</td>
+                            <td>已启用</td>
+                            <td>
+                                <a href="#" class="btn btn-danger">禁用</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                            <td>
+                                <a href="#" class="btn btn-success">启用</a>
+                            </td>
+                        </tr> -->
+                    </tbody>
+                </table>
+
+                <nav>
+                    <ul class="pagination" id="page">
+                       
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </main>
+
+    <!-- jQuery -->
+    <script src="lib/jquery/jquery.js"></script>
+    <!-- bootstrap JS -->
+    <script src="lib/bootstrap/js/bootstrap.js"></script>
+    <!-- 模板引擎 -->
+    <script src="lib/artTemplate/template-web.js"></script>
+    <!-- 分页插件 -->
+    <script src="lib/bootstrap/js/bootstrap-paginator.js"></script>
+    <!-- 文档JS -->
+    <script src="js/newIndex.js"></script>
+
+    <!-- 模板 -->
+    <script type="text/html" id="userInfo">
+        {{ each rows value i }}
+        <tr>
+            <th scope="row">{{ i + 1 }}</th>
+            <td>{{ value.username }}</td>
+            <td>{{ value.mobile }}</td>
+            {{ if value.isDelete == 0 }}
+            <td>已禁用</td>
+            <td>
+                <a href="#" data-id="{{ value.id }}" data-is-delete="{{ value.isDelete }}" class="btn btn-success btn-change">启用</a>
+            </td>
+            {{ else }}
+            <td>已启用</td>
+            <td>
+                <a href="#" data-id="{{ value.id }}" data-is-delete="{{ value.isDelete }}" class="btn btn-danger btn-change">禁用</a>
+            </td>
+            {{ /if}}
+        </tr>
+        {{ /each }}
+    </script>
+
+    <!-- <script type="text/html" id="pagetpl">
+        <li  data-page="{{ (page - 1) < 1 ? 1 : (page - 1)}}"><a href="javascript:void(0);" aria-label="Previous"><span aria-hidden="true">«</span></a></li>
+        {{ each pages value i }}
+        <li data-page="{{ value }}" class="{{ value == page ? 'active' : '' }}"><a href="#">{{ value }}</a></li>
+        {{ /each }}
+        <li  data-page="{{ (page + 1) > pages.length ? pages.length : (page + 1) }}"><a href="javascript:void(0);" aria-label="Next"><span aria-hidden="true">»</span></a></li>
+    </script> -->
+</body>
+
+</html>

@@ -1,0 +1,98 @@
+#main {
+    display: flex;
+    .left {
+        background-color: #88cdea;
+        width: 200px;
+        .user-info {
+            padding: 30px;
+            img {
+                width: 140px;
+                height: 140px;
+                border: 10px solid #fff;
+                box-shadow: 0 0 2px #ff65b0;
+                border-radius: 50%;
+            }
+            p {
+                text-align: center;
+                margin-top: 10px;
+            }
+        }
+        .list-group {
+            .list-group-item {
+                background-color: #88cdea;
+                border: 0;
+                &.active {
+                    background-color: #ff65b0;
+                    border-color: #ff65b0;
+                    color: #fff;
+                }
+                &:hover {
+                    background-color: #ff65b0;
+                    border-color: #ff65b0;
+                    color: #fff;
+                }
+            }
+            .category-manage {
+                padding-left: 20px;
+            }
+        }
+    }
+    .right {
+        flex: 1;
+        .title {
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            .btn-menu {
+                font-size: 20px;
+                background-color: #98cb3f;
+                display: block;
+                width: 30px;
+                height: 30px;
+                line-height: 30px;
+                text-align: center;
+                color: #fff;
+                text-decoration: none;
+                border-radius: 5px;
+            }
+            .btn-exit {
+                font-size: 18px;
+                background-color: #98cb3f;
+                display: block;
+                width: 60px;
+                height: 30px;
+                line-height: 30px;
+                text-align: center;
+                color: #fff;
+                text-decoration: none;
+                border-radius: 5px;
+            }
+        }
+        .content {
+            padding: 20px;
+            background-color: #eee;
+            .table {
+                background-color: #fff;
+                height: 400px;
+                th,
+                td {
+                    text-align: center;
+                    line-height: 30px;
+                    img {
+                        width: 165px;
+                        height: 85px;
+                    }
+                }
+            }
+            .modal {
+                .input-group {
+                    padding: 5px 0;
+                    .brand-logo {
+                        width: 160px;
+                        height: 160px;
+                    }
+                }
+            }
+        }
+    }
+}

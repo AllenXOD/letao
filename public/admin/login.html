@@ -1,12 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>后台登录</title>
+    <!-- 页面标题logo -->
+    <link rel="SHORTCUT ICON" href="favicon.ico">
+    <!-- bootstrap CSS -->
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
+    <!-- 图标库 CSS -->
+    <link rel="stylesheet" href="lib/font-awesome/css/font-awesome.css">
+    <!-- 文档CSS -->
+    <link rel="stylesheet" href="less/login.css">
 </head>
+
 <body>
-    
+    <!-- bootstrap组件 -->
+    <form class="form-horizontal">
+        <img src="images/18.jpg" class="logo" width="200px">
+        <div class="form-group">
+            <label for="inputEmail3" class="col-sm-2 control-label">用户名</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="inputEmail3" value="root" placeholder="Username">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputPassword3" class="col-sm-2 control-label">密码</label>
+            <div class="col-sm-10">
+                <input type="password" class="form-control" id="inputPassword3" value="123456" placeholder="Password">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox"> 记住密码
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-12">
+                <button type="button" class="btn btn-primary btn-block btn-login">Sign in</button>
+            </div>
+        </div>
+    </form>
+    <!-- <form action="#">
+        <div class="input-group">
+            <span class="input-group-addon" id="sizing-addon2">用户名</span>
+            <input type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon2">
+        </div>
+        <div class="input-group">
+            <span class="input-group-addon" id="sizing-addon2">密码</span>
+            <input type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon2">
+        </div>
+        <div class="input-group">
+            <button type="button" class="btn btn-primary">立即登录</button>
+        </div>
+    </form> -->
+
+    <!-- jQuery -->
+    <script src="lib/jquery/jquery.js"></script>
+    <!-- bootstrap JS -->
+    <script src="lib/bootstrap/js/bootstrap.js"></script>
+    <!-- 模板引擎 -->
+    <script src="lib/artTemplate/template-web.js"></script>
+    <!-- 文档JS -->
+    <script src="js/login.js"></script>
 </body>
+
 </html>
